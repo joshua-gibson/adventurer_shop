@@ -9,13 +9,22 @@ def initialize(options)
   @id = options['id'].to_i if options['id']
   @name = options['name']
   @description = options['description']
-  @type_id = options['type_id']
+  @type_id = options['type_id'].to_i
   @image_name = options['image_name']
-  @quantity = options['quantity']
-  @level = options['level']
+  @quantity = options['quantity'].to_i
+  @level = options['level'].to_i
   @effects = options['effects']
-  @buy_price = options['buy_price']
-  @sell_price = options['sell_price']
+  @buy_price = options['buy_price'].to_i
+  @sell_price = options['sell_price'].to_i
+end
+
+
+def save()
+  sql="INSERT INTO items
+       (name, description, type_id, image_name, quantity, level, effects, buy_price, sell_price)
+       VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING id"
+  values=[@name, @description, @type_id, @image_name, @quantity, @level, @effects, @buy_price, @sell_price]
+  @id = SqlRunner.run(sql,values).first['id'].to_i
 end
 
 

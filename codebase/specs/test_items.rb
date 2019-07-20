@@ -15,9 +15,7 @@ class DrinkTest < MiniTest::Test
                         'level' => 3,
                         'effects' => 'xeffects',
                         'buy_price' => 4,
-                        'sell_price' => 5,
-
-      })
+                        'sell_price' => 5,   })
      assert_equal('xname', newitem.name)
      assert_equal('xdescription', newitem.description)
      assert_equal(1, newitem.type_id)
