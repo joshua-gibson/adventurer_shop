@@ -13,6 +13,7 @@ class DrinkTest < MiniTest::Test
      assert_equal('Mage', newtype.usable_by)
   end
 
+ 
 
 
 

@@ -35,11 +35,9 @@ class Type
   end
 
 
-
-  #
-  #
-  # self.delete_all()
-  #
-  # end
+  def self.delete_all()
+    sql="DELETE FROM types"
+    SqlRunner.run(sql)
+  end
 
 end
