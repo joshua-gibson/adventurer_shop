@@ -27,5 +27,12 @@ def save()
   @id = SqlRunner.run(sql,values).first['id'].to_i
 end
 
+def update()
+  sql="UPDATE items
+       SET (name, description, type_id, image_name, quantity, level, effects, buy_price, sell_price)
+       = ($1, $2, $3, $4, $5, $6, $7, $8, $9) WHERE id=$10"
+  values=[@name, @description, @type_id, @image_name, @quantity, @level, @effects, @buy_price, @sell_price, @id]
+  SqlRunner.run(sql,values)
+end
 
 end
