@@ -35,4 +35,17 @@ def update()
   SqlRunner.run(sql,values)
 end
 
+def delete()
+  sql="DELETE FROM items WHERE id = $1"
+  values=[@id]
+  SqlRunner.run(sql,values)
+end
+
+def self.delete_all()
+  sql="DELETE FROM items"
+  SqlRunner.run(sql)
+end
+
+
+
 end
