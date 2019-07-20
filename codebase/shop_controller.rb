@@ -24,6 +24,12 @@ post '/shop' do
   erb(:create)
 end
 
+# delete
+get '/shop/del/:id' do
+  @item = Item.find(params[:id])
+  @item.delete
+  erb(:delete)
+end
 
 # show
 get '/shop/:id' do

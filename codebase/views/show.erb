@@ -12,3 +12,15 @@
 <p>Buy Price: <%= @item.buy_price %></p>
 <p>Sell Price: <%= @item.sell_price %></p>
 <hr/>
+<nav>
+  <ul>
+    <li>
+      <a href="#">Edit Item</a>
+    </li>
+    <li>
+      <a href="/shop/del/<%=@item.id %>">Delete Item</a>
+    </li>
+  </ul>
+</nav>
+
+<hr/>
