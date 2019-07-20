@@ -6,7 +6,7 @@ class Type
   attr_accessor :name, :category, :usable_by
 
   def initialize(options)
-    @id = options['id'].to_i if options[:id]
+    @id = options['id'].to_i if options['id']
     @name = options['name']
     @category = options['category']
     @usable_by = options['usable_by']
