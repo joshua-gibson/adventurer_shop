@@ -10,3 +10,9 @@ get '/shop' do
   @items = Item.all()
   erb(:index)
 end
+
+# show
+get '/shop/:id' do
+  @item = Item.find(params[:id])
+  erb(:show)
+end

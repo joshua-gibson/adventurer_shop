@@ -60,4 +60,11 @@ def self.all()
   return result
 end
 
+def self.find(id)
+  sql = "SELECT * FROM items WHERE id = $1"
+  values=[id]
+  found = SqlRunner.run(sql,values).first
+  return Item.new(found)
+end
+
 end
