@@ -27,13 +27,19 @@ class Type
     SqlRunner.run(sql,values)
   end
 
-
   def delete()
     sql="DELETE FROM types WHERE id = $1"
     values=[@id]
     SqlRunner.run(sql,values)
   end
 
+  #return an object given the name and category
+    def self.find_by_nc(name, category)
+      sql="SELECT * FROM types WHERE name=$1 AND category=$2 LIMIT 1"
+      values=[name, category]
+      found = SqlRunner.run(sql,values).first
+      return Type.new(found)
+    end
 
   def self.delete_all()
     sql="DELETE FROM types"
