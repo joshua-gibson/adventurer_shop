@@ -1,0 +1,16 @@
+<p>This is all the Items</p>
+
+<hr/>
+
+<% @items.each do |item| %>
+<p>Name: <%= item.name %></p>
+<p>Description: <%= item.description %></p>
+<p>Type: <%= item.type.name %></p>
+<p>Image: <%= item.image_name %></p>
+<p>Quantity: <%= item.quantity %></p>
+<p>Level: <%= item.level %></p>
+<p>Effects: <%= item.effects %></p>
+<p>Buy Price: <%= item.buy_price %></p>
+<p>Sell Price: <%= item.sell_price %></p>
+<hr/>
+<% end %>

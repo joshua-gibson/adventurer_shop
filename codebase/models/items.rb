@@ -41,11 +41,23 @@ def delete()
   SqlRunner.run(sql,values)
 end
 
+def type()
+  sql = "SELECT * FROM types WHERE id = $1"
+  values=[@type_id]
+  found = SqlRunner.run(sql,values).first
+  return Type.new(found)
+end
+
 def self.delete_all()
   sql="DELETE FROM items"
   SqlRunner.run(sql)
 end
 
-
+def self.all()
+  sql = "SELECT * FROM items"
+  items = SqlRunner.run( sql )
+  result = items.map { |item| Item.new( item ) }
+  return result
+end
 
 end
