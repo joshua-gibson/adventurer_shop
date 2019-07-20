@@ -13,7 +13,8 @@ end
 
 #new
 get '/shop/new' do
-erb(:new)
+  @types = Type.all()
+  erb(:new)
 end
 
 # create

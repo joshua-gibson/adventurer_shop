@@ -41,6 +41,13 @@ class Type
       return Type.new(found)
     end
 
+    def self.all()
+      sql = "SELECT * FROM types"
+      types = SqlRunner.run( sql )
+      result = types.map { |type| Type.new( type ) }
+      return result
+    end
+
   def self.delete_all()
     sql="DELETE FROM types"
     SqlRunner.run(sql)

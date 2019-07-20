@@ -10,8 +10,15 @@
 <input type="textarea" name="description" id="description">
 <br>
 <br>
-<label for="type">Type:</label>
-<input type="text" name="type" id="type">
+
+
+<label for="type_id">Type:</label>
+<select name="type_id" id="type-id">
+<% @types.each do |type| %>
+    <option value=<%= type.id %>><%= type.name %> (<%= type.category %>)</option>
+<% end %>
+</select>
+
 <br>
 <br>
 <label for="image_name">Image Name:</label>
