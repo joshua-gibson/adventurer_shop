@@ -3,10 +3,10 @@
 <hr/>
 
 <% @items.each do |item| %>
+<img src="images/<%= item.image_name %>" alt="Item Image" height="42" width="42">
 <p>Name: <%= item.name %></p>
 <p>Description: <%= item.description %></p>
 <p>Type: <%= item.type.name %></p>
-<p>Image: <%= item.image_name %></p>
 <p>Quantity: <%= item.quantity %></p>
 <p>Level: <%= item.level %></p>
 <p>Effects: <%= item.effects %></p>
