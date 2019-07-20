@@ -11,6 +11,19 @@ get '/shop' do
   erb(:index)
 end
 
+#new
+get '/shop/new' do
+erb(:new)
+end
+
+# create
+post '/shop' do
+  @item = Item.new(params)
+  @item.save()
+  erb(:create)
+end
+
+
 # show
 get '/shop/:id' do
   @item = Item.find(params[:id])
