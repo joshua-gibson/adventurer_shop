@@ -54,7 +54,7 @@ def self.delete_all()
 end
 
 def self.all()
-  sql = "SELECT * FROM items"
+  sql = "SELECT * FROM items ORDER BY type_id, level"
   items = SqlRunner.run( sql )
   result = items.map { |item| Item.new( item ) }
   return result
