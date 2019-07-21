@@ -138,8 +138,8 @@ i_shields_05 = Item.new({
   i_shields_04.save
   i_shields_05.save
 
-
-i03 = Item.new({
+#swords
+i_sword_01 = Item.new({
   'name' => 'Short Sword',
   'description' => 'A sword designed for close-quarters fighting',
   'type_id' => Type.find_by_nc('Sword','Weapon').id,
@@ -150,20 +150,153 @@ i03 = Item.new({
   'buy_price' => 9.00,
   'sell_price' => 15.00
   })
+i_sword_02 = Item.new({
+  'name' => 'Long Sword',
+  'description' => "A soldier's standard issue blade",
+  'type_id' => Type.find_by_nc('Sword','Weapon').id,
+  'image_name' => 'W_Sword003.png',
+  'quantity' => 5,
+  'level' => 2,
+  'effects' => 'none',
+  'buy_price' => 15.00,
+  'sell_price' => 39.00
+  })
 
-i04 = Item.new({
+i_sword_03 = Item.new({
+  'name' => 'Broad Sword',
+  'description' => "A basket-hilted modern military weapon",
+  'type_id' => Type.find_by_nc('Sword','Weapon').id,
+  'image_name' => 'W_Sword014.png',
+  'quantity' => 7,
+  'level' => 3,
+  'effects' => 'none',
+  'buy_price' => 18.00,
+  'sell_price' => 48.00
+  })
+
+i_sword_04 = Item.new({
+  'name' => 'Ornate Sabre',
+  'description' => "An exotic weapon with curved blade",
+  'type_id' => Type.find_by_nc('Sword','Weapon').id,
+  'image_name' => 'W_Sword013.png',
+  'quantity' => 2,
+  'level' => 4,
+  'effects' => 'none',
+  'buy_price' => 43.00,
+  'sell_price' => 97.00
+  })
+
+i_sword_05 = Item.new({
+  'name' => 'Greatsword',
+  'description' => "An enormous two-handed sword",
+  'type_id' => Type.find_by_nc('Sword','Weapon').id,
+  'image_name' => 'W_Sword004.png',
+  'quantity' => 3,
+  'level' => 5,
+  'effects' => 'none',
+  'buy_price' => 127.00,
+  'sell_price' => 216.00
+  })
+
+i_sword_06 = Item.new({
+  'name' => 'Sword of Ember',
+  'description' => "This blade erupts in a torrent of fire when unsheathed",
+  'type_id' => Type.find_by_nc('Sword','Weapon').id,
+  'image_name' => 'W_Sword016.png',
+  'quantity' => 1,
+  'level' => 6,
+  'effects' => 'Fire',
+  'buy_price' => 387.00,
+  'sell_price' => 679.00
+  })
+i_sword_07 = Item.new({
+  'name' => 'Forceblade',
+  'description' => "Projects a wave of force when swung",
+  'type_id' => Type.find_by_nc('Sword','Weapon').id,
+  'image_name' => 'S_Sword01.png',
+  'quantity' => 1,
+  'level' => 6,
+  'effects' => 'Fire',
+  'buy_price' => 420.00,
+  'sell_price' => 765.00
+  })
+
+i_sword_01.save
+i_sword_02.save
+i_sword_03.save
+i_sword_04.save
+i_sword_05.save
+i_sword_06.save
+i_sword_07.save
+
+#books
+i_book_01 = Item.new({
   'name' => 'Battered Grimoire',
   'description' => 'A tattered spellbook with many pages missing',
   'type_id' => Type.find_by_nc('Spellbook','Weapon').id,
-  'image_name' => 'W_Book01.png',
+  'image_name' => 'W_Book05.png',
   'quantity' => 1,
   'level' => 1,
   'effects' => 'none',
   'buy_price' => 12.00,
   'sell_price' => 20.00
   })
+i_book_02 = Item.new({
+  'name' => "Acolyte's Textbook",
+  'description' => 'A textbook from the Tower with notes scrawled in the margins',
+  'type_id' => Type.find_by_nc('Spellbook','Weapon').id,
+  'image_name' => 'W_Book01.png',
+  'quantity' => 3,
+  'level' => 2,
+  'effects' => 'none',
+  'buy_price' => 32.00,
+  'sell_price' => 54.00
+  })
+i_book_03 = Item.new({
+  'name' => "Granger's Book of Hours",
+  'description' => 'An arcane tome detailing many advanced rituals',
+  'type_id' => Type.find_by_nc('Spellbook','Weapon').id,
+  'image_name' => 'W_Book02.png',
+  'quantity' => 1,
+  'level' => 3,
+  'effects' => 'none',
+  'buy_price' => 97.00,
+  'sell_price' => 143.00
+  })
+i_book_04 = Item.new({
+  'name' => "Lorekeeper",
+  'description' => 'A detailed recording of practical magical experiments',
+  'type_id' => Type.find_by_nc('Spellbook','Weapon').id,
+  'image_name' => 'W_Book07.png',
+  'quantity' => 1,
+  'level' => 4,
+  'effects' => 'none',
+  'buy_price' => 182.00,
+  'sell_price' => 276.00
+  })
 
-i05 = Item.new({
+i_book_05 = Item.new({
+  'name' => "Cryptonomicon",
+  'description' => 'Touching this black bound volume causes disturbing hallucinations',
+  'type_id' => Type.find_by_nc('Spellbook','Weapon').id,
+  'image_name' => 'W_Book04.png',
+  'quantity' => 1,
+  'level' => 4,
+  'effects' => 'none',
+  'buy_price' => 467.00,
+  'sell_price' => 638.00
+  })
+
+i_book_01.save
+i_book_02.save
+i_book_03.save
+i_book_04.save
+i_book_05.save
+
+
+
+#maces
+i_mace_01 = Item.new({
   'name' => 'Club',
   'description' => 'A heavy stick',
   'type_id' => Type.find_by_nc('Mace','Weapon').id,
@@ -175,8 +308,56 @@ i05 = Item.new({
   'sell_price' => 3.00
   })
 
+i_mace_02 = Item.new({
+  'name' => 'Sledgehammer',
+  'description' => 'A lage industrial hammer repurposed as a weapon',
+  'type_id' => Type.find_by_nc('Mace','Weapon').id,
+  'image_name' => 'W_Mace001.png',
+  'quantity' => 4,
+  'level' => 2,
+  'effects' => 'none',
+  'buy_price' => 3,
+  'sell_price' => 7
+  })
 
+i_mace_03 = Item.new({
+  'name' => 'Morning Star',
+  'description' => 'A heavy steel spiked ball swung on a chain',
+  'type_id' => Type.find_by_nc('Mace','Weapon').id,
+  'image_name' => 'W_Mace005.png',
+  'quantity' => 5,
+  'level' => 3,
+  'effects' => 'none',
+  'buy_price' => 12,
+  'sell_price' => 34
+  })
 
-i03.save
-i04.save
-i05.save
+i_mace_04 = Item.new({
+  'name' => "Flail",
+  'description' => 'A wickedly hooked chain swung from a handle',
+  'type_id' => Type.find_by_nc('Mace','Weapon').id,
+  'image_name' => 'W_Mace006.png',
+  'quantity' => 6,
+  'level' => 4,
+  'effects' => 'none',
+  'buy_price' => 32,
+  'sell_price' => 56
+  })
+
+i_mace_05 = Item.new({
+  'name' => "Flanged Mace",
+  'description' => 'A large two handed mace with sharp flanges',
+  'type_id' => Type.find_by_nc('Mace','Weapon').id,
+  'image_name' => 'W_Mace013.png',
+  'quantity' => 2,
+  'level' => 5,
+  'effects' => 'none',
+  'buy_price' => 54,
+  'sell_price' => 82
+  })
+
+i_mace_01.save
+i_mace_02.save
+i_mace_03.save
+i_mace_04.save
+i_mace_05.save
