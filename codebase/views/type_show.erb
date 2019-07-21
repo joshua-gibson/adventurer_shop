@@ -1,0 +1,20 @@
+<p>This is the selected type</p>
+
+<hr/>
+
+<p>Name: <%= @type.name %></p>
+<p>Category: <%= @type.category %></p>
+<p>Usable By: <%= @type.usable_by %></p>
+<hr/>
+<nav>
+  <ul>
+    <li>
+      <a href="#">Edit Type</a>
+    </li>
+    <li>
+      <a href="/types/del/<%=@type.id %>">Delete Type</a>
+    </li>
+  </ul>
+</nav>
+
+<hr/>

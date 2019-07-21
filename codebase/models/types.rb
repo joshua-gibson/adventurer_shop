@@ -41,6 +41,13 @@ class Type
       return Type.new(found)
     end
 
+    def self.find(id)
+      sql = "SELECT * FROM types WHERE id = $1"
+      values=[id]
+      found = SqlRunner.run(sql,values).first
+      return Type.new(found)
+    end
+
     def self.all()
       sql = "SELECT * FROM types"
       types = SqlRunner.run( sql )

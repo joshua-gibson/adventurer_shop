@@ -41,6 +41,24 @@ end
 #REST views for TYPES
 # index
 get '/types' do
-  @items = Item.all()
+  @types = Type.all()
   erb(:type_index)
+end
+
+#new
+get '/types/new' do
+  erb(:type_new)
+end
+
+# create
+post '/types' do
+  @type = Type.new(params)
+  @type.save()
+  erb(:type_create)
+end
+
+# show
+get '/types/:id' do
+  @type = Type.find(params[:id])
+  erb(:type_show)
 end

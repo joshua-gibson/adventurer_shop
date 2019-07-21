@@ -1,0 +1,18 @@
+<p>This is all the Types</p>
+
+<ul>
+  <li>
+    <a href="/types/new">Add New Type</a>
+  </li>
+</ul>
+
+<hr/>
+
+<% @types.each do |type| %>
+<p>Name: <%= type.name %></p>
+<p>Category: <%= type.category %></p>
+
+<a href="/types/<%=type.id %>">Details</a>
+
+<hr/>
+<% end %>
