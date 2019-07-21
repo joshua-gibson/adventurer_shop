@@ -1,0 +1,18 @@
+<p>Edit Type!</p>
+
+<br>
+<form action="/types/<%= @type.id %>" method="post">
+  <label for="name">Name:</label>
+  <input type="text" name="name" id="name" value="<%= @type.name %>">
+  <br>
+  <br>
+  <label for="category">Category:</label>
+  <input type="text" name="category" id="category" value="<%= @type.category %>">
+  <br>
+  <br>
+  <label for="usable_by">Usable By:</label>
+  <input type="text" name="usable_by" id="usable-by" value="<%= @type.usable_by %>">
+  <br>
+  <br>
+  <input type="submit" value="Update Type">
+</form>

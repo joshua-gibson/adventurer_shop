@@ -71,15 +71,27 @@ post '/types' do
   erb(:type_create)
 end
 
-# show
-get '/types/:id' do
-  @type = Type.find(params[:id])
-  erb(:type_show)
-end
-
 # delete
 get '/types/del/:id' do
   @type = Type.find(params[:id])
   @type.delete
   erb(:type_delete)
+end
+
+#edit
+get '/types/edit/:id' do
+@type = Type.find(params[:id])
+  erb(:type_edit)
+end
+
+post '/types/:id' do
+  type = Type.new(params)
+  type.update
+  erb(:type_edited)
+end
+
+# show
+get '/types/:id' do
+  @type = Type.find(params[:id])
+  erb(:type_show)
 end
