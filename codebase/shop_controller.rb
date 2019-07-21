@@ -32,11 +32,25 @@ get '/shop/del/:id' do
   erb(:item_delete)
 end
 
+#edit
+get '/shop/edit/:id' do
+  @types = Type.all
+  @item = Item.find(params[:id])
+  erb(:item_edit)
+end
+
+post '/shop/:id' do
+  item = Item.new(params)
+  item.update
+  erb(:item_edited)
+end
+
 # show
 get '/shop/:id' do
   @item = Item.find(params[:id])
   erb(:item_show)
 end
+
 
 #REST views for TYPES
 # index
