@@ -12,7 +12,11 @@
       <a href="#">Edit Type</a>
     </li>
     <li>
+      <% if @type.item_count >= 1 %>
+      <p>Delete Type</p>
+      <% else  %>
       <a href="/types/del/<%=@type.id %>">Delete Type</a>
+      <% end  %>
     </li>
   </ul>
 </nav>

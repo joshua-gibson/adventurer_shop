@@ -62,3 +62,10 @@ get '/types/:id' do
   @type = Type.find(params[:id])
   erb(:type_show)
 end
+
+# delete
+get '/types/del/:id' do
+  @type = Type.find(params[:id])
+  @type.delete
+  erb(:type_delete)
+end

@@ -33,6 +33,13 @@ class Type
     SqlRunner.run(sql,values)
   end
 
+# return the number of items this type has assigned to it
+  def item_count()
+    sql = "SELECT COUNT(id) AS num FROM items WHERE type_id = $1"
+    values=[id]
+    return SqlRunner.run(sql,values).first['num'].to_i
+  end
+
   #return an object given the name and category
     def self.find_by_nc(name, category)
       sql="SELECT * FROM types WHERE name=$1 AND category=$2 LIMIT 1"
