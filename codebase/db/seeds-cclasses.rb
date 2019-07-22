@@ -5,10 +5,10 @@ require_relative('../models/character_classes.rb')
 
 C_Class.delete_all
 
-cc01 = Category.new({"name" => 'Mage'})
-cc02 = Category.new({"name" => 'Warrior'})
-cc03 = Category.new({"name" => 'Ranger'})
-cc04 = Category.new({"name" => 'Cleric'})
+cc01 = C_Class.new({"name" => 'Mage'})
+cc02 = C_Class.new({"name" => 'Warrior'})
+cc03 = C_Class.new({"name" => 'Ranger'})
+cc04 = C_Class.new({"name" => 'Cleric'})
 
 
 cc01.save
