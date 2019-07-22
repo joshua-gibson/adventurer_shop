@@ -1,5 +1,6 @@
 require_relative('./models/types.rb')
 require_relative('./models/items.rb')
+require_relative('../models/categories.rb')
 require('pry')
 require('pry-byebug')
 
