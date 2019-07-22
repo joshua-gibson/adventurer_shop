@@ -55,6 +55,14 @@ def stock_warn()
   return warn
 end
 
+def stock_ch(chtype, amt)
+  if chtype == 'add'
+    @quantity += amt.to_i
+  else
+    @quantity -= amt.to_i
+  end
+end
+
 def self.delete_all()
   sql="DELETE FROM items"
   SqlRunner.run(sql)

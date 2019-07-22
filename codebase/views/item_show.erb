@@ -18,6 +18,21 @@
 <% elsif @item.stock_warn() == "none" %>
 <p>No Stock!</p>
 <% end %>
+<br>
+
+<form action="/shop/stockch/<%= @item.id %>" method="post">
+  <label for="chamt">Sell Item:</label>
+  <input type="hidden" name="chtype" id="chtype" value="sub">
+  <input type="number" name="chamt" id="chamt" value="1">
+  <input type="submit" value="Sell">
+</form>
+
+<form action="/shop/stockch/<%= @item.id %>" method="post">
+  <label for="chamt">Buy Item:</label>
+  <input type="hidden" name="chtype" id="chtype" value="add">
+  <input type="number" name="chamt" id="chamt" value="1">
+  <input type="submit" value="Buy">
+</form>
 
 <hr/>
 <nav>

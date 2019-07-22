@@ -32,6 +32,15 @@ get '/shop/del/:id' do
   erb(:item_delete)
 end
 
+#stock change
+post '/shop/stockch/:id' do
+  @item = Item.find(params[:id])
+    # binding.pry
+  @item.stock_ch(params[:chtype], params[:chamt].to_i)
+  @item.update()
+  redirect to "/shop/#{params['id']}"
+end
+
 #edit
 get '/shop/edit/:id' do
   @types = Type.all
@@ -44,6 +53,8 @@ post '/shop/:id' do
   item.update
   erb(:item_edited)
 end
+
+
 
 # show
 get '/shop/:id' do
