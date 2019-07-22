@@ -3,12 +3,12 @@
 # index
 get '/cats' do
   @cats = Category.all()
-  erb(:cat_index)
+  erb(:"categories/cat_index")
 end
 
 #new
 get '/cats/new' do
-  erb(:cat_new)
+  erb(:"categories/cat_new")
 end
 
 # create

@@ -3,27 +3,27 @@
 # index
 get '/shop' do
   @items = Item.all()
-  erb(:item_index)
+  erb(:"items/item_index")
 end
 
 #new
 get '/shop/new' do
   @types = Type.all()
-  erb(:item_new)
+  erb(:"items/item_new")
 end
 
 # create
 post '/shop' do
   @item = Item.new(params)
   @item.save()
-  erb(:item_create)
+  erb(:"items/item_create")
 end
 
 # delete
 get '/shop/del/:id' do
   @item = Item.find(params[:id])
   @item.delete
-  erb(:item_delete)
+  erb(:"items/item_delete")
 end
 
 #stock change
@@ -39,17 +39,17 @@ end
 get '/shop/edit/:id' do
   @types = Type.all
   @item = Item.find(params[:id])
-  erb(:item_edit)
+  erb(:"items/item_edit")
 end
 
 post '/shop/:id' do
   item = Item.new(params)
   item.update
-  erb(:item_edited)
+  erb(:"items/item_edited")
 end
 
 # show
 get '/shop/:id' do
   @item = Item.find(params[:id])
-  erb(:item_show)
+  erb(:"items/item_show")
 end
