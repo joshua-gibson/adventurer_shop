@@ -1,10 +1,13 @@
 require_relative('./models/types.rb')
 require_relative('./models/items.rb')
-require_relative('../models/categories.rb')
+require_relative('./models/categories.rb')
 require('pry')
 require('pry-byebug')
 
-newtype = Type.new({'name' => 'Staff', 'category' => 'Weapon', 'usable_by' => 'Mage'})
+newcat = Category.new({'name' => 'Scroll'})
+newcat.save
+
+newtype = Type.new({'name' => 'Staff', 'category_id' => 1, 'usable_by' => 'Mage'})
 newtype.save
 
 newitem = Item.new({'name' => 'xname',
