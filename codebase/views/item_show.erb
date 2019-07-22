@@ -11,6 +11,14 @@
 <p>Effects: <%= @item.effects %></p>
 <p>Buy Price: <%= @item.buy_price %></p>
 <p>Sell Price: <%= @item.sell_price %></p>
+<br>
+
+<% if @item.stock_warn() == "low" %>
+<p>Low Stock!</p>
+<% elsif @item.stock_warn() == "none" %>
+<p>No Stock!</p>
+<% end %>
+
 <hr/>
 <nav>
   <ul>

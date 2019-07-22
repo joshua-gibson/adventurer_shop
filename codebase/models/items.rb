@@ -48,6 +48,13 @@ def type()
   return Type.new(found)
 end
 
+def stock_warn()
+  warn = nil
+  warn = "low" if @quantity <= 2
+  warn = "none" if @quantity <= 0
+  return warn
+end
+
 def self.delete_all()
   sql="DELETE FROM items"
   SqlRunner.run(sql)
