@@ -45,6 +45,14 @@ class Category
       return Category.new(found)
     end
 
+  #return an object given the name and category_id
+    def self.find_by_name(name)
+      sql="SELECT * FROM categories WHERE name=$1 LIMIT 1"
+      values=[name]
+      found = SqlRunner.run(sql,values).first
+      return Category.new(found)
+    end
+
     def self.all()
       sql = "SELECT * FROM categories"
       categories = SqlRunner.run( sql )

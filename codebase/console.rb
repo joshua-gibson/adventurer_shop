@@ -7,7 +7,7 @@ require('pry-byebug')
 newcat = Category.new({'name' => 'Scroll'})
 newcat.save
 
-newtype = Type.new({'name' => 'Staff', 'category_id' => 1, 'usable_by' => 'Mage'})
+newtype = Type.new({'name' => 'Staff', 'category_id' => Category.find_by_name('Scroll').id, 'usable_by' => 'Mage'})
 newtype.save
 
 newitem = Item.new({'name' => 'xname',
