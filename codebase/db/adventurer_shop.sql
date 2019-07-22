@@ -1,10 +1,15 @@
 DROP TABLE IF EXISTS items;
 DROP TABLE IF EXISTS types;
+DROP TABLE IF EXISTS character_classes;
 DROP TABLE IF EXISTS categories;
 
 
-
 CREATE TABLE categories (
+id SERIAL4 PRIMARY KEY,
+name VARCHAR(255)
+);
+
+CREATE TABLE character_classes (
 id SERIAL4 PRIMARY KEY,
 name VARCHAR(255)
 );

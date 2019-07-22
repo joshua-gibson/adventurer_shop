@@ -4,7 +4,7 @@ require_relative('../models/items.rb')
 
 
 
-class DrinkTest < MiniTest::Test
+class ItemTest < MiniTest::Test
 
   def test_types_attrs()
     newitem = Item.new({'name' => 'xname',

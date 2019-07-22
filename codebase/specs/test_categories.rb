@@ -3,7 +3,7 @@ require("minitest/rg")
 require_relative('../models/categories.rb')
 
 
-class DrinkTest < MiniTest::Test
+class CatTest < MiniTest::Test
 
   def test_cats_attrs()
     newcat = Category.new({'name' => 'Clothing'})
@@ -11,7 +11,7 @@ class DrinkTest < MiniTest::Test
 
   end
 
- 
+
 
 
 

@@ -4,7 +4,7 @@ require_relative('../models/types.rb')
 
 
 
-class DrinkTest < MiniTest::Test
+class TypeTest < MiniTest::Test
 
   def test_types_attrs()
     newtype = Type.new({'name' => 'Staff', 'category_id' => 1, 'usable_by' => 'Mage'})
