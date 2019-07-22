@@ -55,6 +55,10 @@ def stock_warn()
   return warn
 end
 
+def margin()
+  return @sell_price - @buy_price
+end
+
 def stock_ch(chtype, amt)
   if chtype == 'add'
     @quantity += amt.to_i

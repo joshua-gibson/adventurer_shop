@@ -11,6 +11,7 @@
 <p>Effects: <%= @item.effects %></p>
 <p>Buy Price: <%= @item.buy_price %></p>
 <p>Sell Price: <%= @item.sell_price %></p>
+<p>Margin: <%= @item.margin %></p>
 <br>
 
 <% if @item.stock_warn() == "low" %>
