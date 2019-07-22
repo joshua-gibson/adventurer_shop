@@ -15,7 +15,7 @@
 <label for="type_id">Type:</label>
 <select name="type_id" id="type-id">
 <% @types.each do |type| %>
-    <option value=<%= type.id %>><%= type.name %> (<%= type.category %>)</option>
+    <option value=<%= type.id %>><%= type.name %> (<%= type.category.name %>)</option>
 <% end %>
 </select>
 

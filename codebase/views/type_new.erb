@@ -8,8 +8,15 @@
   <input type="text" name="name" id="name">
   <br>
   <br>
-  <label for="category">Category:</label>
-  <input type="text" name="category" id="category">
+
+  <label for="category_id">Type:</label>
+  <select name="category_id" id="category-id">
+  <% @categories.each do |cat| %>
+      <option value=<%= cat.id %>><%= cat.name %> (<%= cat.name %>)</option>
+  <% end %>
+  </select>
+
+
   <br>
   <br>
   <label for="usable_by">Usable By:</label>

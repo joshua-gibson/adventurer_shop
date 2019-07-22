@@ -10,7 +10,7 @@
 
 <% @types.each do |type| %>
 <p>Name: <%= type.name %></p>
-<p>Category: <%= type.category %></p>
+<p>Category: <%= type.category.name %></p>
 
 <a href="/types/<%=type.id %>">Details</a>
 

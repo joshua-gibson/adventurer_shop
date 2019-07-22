@@ -3,7 +3,7 @@ require( 'sinatra/reloader' )
 require( 'pry-byebug' )
 require_relative('./models/items.rb')
 require_relative('./models/types.rb')
-require_relative('../models/categories.rb')
+require_relative('./models/categories.rb')
 also_reload('./models/*')
 
 #REST views for ITEMS
@@ -73,6 +73,7 @@ end
 
 #new
 get '/types/new' do
+  @categories = Category.all()
   erb(:type_new)
 end
 

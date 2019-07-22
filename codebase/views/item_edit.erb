@@ -16,9 +16,9 @@
 <select name="type_id" id="type-id">
 <% @types.each do |type| %>
     <% if type.id == @item.type_id  %>
-      <option value=<%= type.id %> selected><%= type.name %> (<%= type.category %>)</option>
+      <option value=<%= type.id %> selected><%= type.name %> (<%= type.category.name %>)</option>
     <% else %>
-      <option value=<%= type.id %>><%= type.name %> (<%= type.category %>)</option>
+      <option value=<%= type.id %>><%= type.name %> (<%= type.category.name %>)</option>
     <% end %>
 <% end %>
 </select>
