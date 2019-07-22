@@ -55,14 +55,11 @@ post '/shop/:id' do
   erb(:item_edited)
 end
 
-
-
 # show
 get '/shop/:id' do
   @item = Item.find(params[:id])
   erb(:item_show)
 end
-
 
 #REST views for TYPES
 # index
@@ -107,4 +104,32 @@ end
 get '/types/:id' do
   @type = Type.find(params[:id])
   erb(:type_show)
+end
+
+
+
+#REST views for CATEGORIES
+# index
+get '/cats' do
+  @cats = Category.all()
+  erb(:cat_index)
+end
+
+#new
+get '/cats/new' do
+  erb(:cat_new)
+end
+
+# create
+post '/cats' do
+  @cat = Category.new(params)
+  @cat.save()
+    redirect to "/cats"
+end
+
+# delete
+get '/cats/del/:id' do
+  @cat = Category.find(params[:id])
+  @cat.delete
+  redirect to "/cats"
 end

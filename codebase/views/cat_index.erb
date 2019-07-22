@@ -1,0 +1,17 @@
+<p>This is all the Categories</p>
+
+<ul>
+  <li>
+    <a href="/cats/new">Add New Category</a>
+  </li>
+</ul>
+
+<hr/>
+
+<% @cats.each do |cat| %>
+<p>Name: <%= cat.name %></p>
+
+<a href="/cats/del/<%=cat.id %>">Delete</a> 
+
+<hr/>
+<% end %>
