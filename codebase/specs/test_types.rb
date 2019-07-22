@@ -7,13 +7,13 @@ require_relative('../models/types.rb')
 class DrinkTest < MiniTest::Test
 
   def test_types_attrs()
-    newtype = Type.new({'name' => 'Staff', 'category' => 'Weapon', 'usable_by' => 'Mage'})
+    newtype = Type.new({'name' => 'Staff', 'category_id' => 1, 'usable_by' => 'Mage'})
      assert_equal('Staff', newtype.name)
-     assert_equal('Weapon', newtype.category)
+     assert_equal(1, newtype.category_id)
      assert_equal('Mage', newtype.usable_by)
   end
 
- 
+
 
 
 
