@@ -1,8 +1,12 @@
 require_relative('./models/types.rb')
 require_relative('./models/items.rb')
 require_relative('./models/categories.rb')
+require_relative('./models/character_classes.rb')
 require('pry')
 require('pry-byebug')
+
+newcc = C_Class.new({'name' => 'Mage'})
+newcc.save
 
 newcat = Category.new({'name' => 'Scroll'})
 newcat.save
@@ -21,6 +25,18 @@ newitem = Item.new({'name' => 'xname',
                     'sell_price' => 5,   })
 newitem.save
 
+i_arm_01 = Item.new({
+  'name' => 'Cloth Armour',
+  'description' => 'A padded cloth doublet providing minimal protection',
+  'type_id' => Type.find_by_nc('Armour','Clothing').id,
+  'image_name' => 'A_Armor04.png',
+  'quantity' => 4,
+  'level' => 1,
+  'effects' => 'none',
+  'buy_price' => 2.00,
+  'sell_price' => 5.00
+  })
+i_arm_01 .save
 
 binding.pry
 null

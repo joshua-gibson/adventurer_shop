@@ -1,6 +1,7 @@
 require_relative('../models/types.rb')
 require_relative('../models/items.rb')
 require_relative('../models/categories.rb')
+require_relative('../models/character_classes.rb')
 
 Category.delete_all
 
