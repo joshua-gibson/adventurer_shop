@@ -9,8 +9,8 @@
 <hr/>
 
 <% @ctrels.each do |ctrel| %>
-<p>Type: <%= ctrel.type_id %></p>
-<p>Class: <%= ctrel.cclass_id %></p>
+<p>Type: <%= ctrel.type.name %></p>
+<p>Class: <%= ctrel.c_class.name %></p>
 
 <a href="/ctrel/del/<%=ctrel.id %>">Delete</a>
 

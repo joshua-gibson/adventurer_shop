@@ -8,6 +8,8 @@ end
 
 #new
 get '/ctrel/new' do
+  @cclasses = C_Class.all()
+  @types = Type.all()
   erb(:"ctrel/ctrel_new")
 end
 
