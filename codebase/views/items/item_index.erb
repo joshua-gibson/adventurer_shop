@@ -1,19 +1,27 @@
-<p>This is all the Items</p>
+
+
+<h2>Stock List</h2>
+
+  <a href="/shop/new">Add Item</a>
 
 <hr/>
 <p>Filter By:</p>
-
+    <nav class="navbar">
+      <ul id="navlist">
   <% @cats.each do |cat| %>
-        <a href="/shop/filter/<%=  cat.id %>"><%= cat.name %></a>
+        <li><a href="/shop/filter/<%=  cat.id %>"><%= cat.name %></a></li>
   <% end %>
+</ul>
+</nav>
 
 
-<hr/>
 <% @items.each do |item| %>
+<div class="indexitem">
+
 <img src="../../images/<%= item.image_name %>" alt="Item Image" height="42" width="42">
 <p>Name: <%= item.name %></p>
 <p>Quantity: <%= item.quantity %></p>
 
 <a href="/shop/<%=item.id %>">Details</a>
-<hr/>
+</div>
 <% end %>

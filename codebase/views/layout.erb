@@ -6,15 +6,14 @@
     <link rel="stylesheet" href="/style.css">
   </head>
 
+<div class="outerbound">
+
 
   <body>
-    <nav>
-      <ul>
+    <nav class="navbar">
+      <ul id="navlist">
         <li>
           <a href="/shop">Index Page</a>
-        </li>
-        <li>
-          <a href="/shop/new">Add Item</a>
         </li>
         <li>
           <a href="/types">Type List</a>
@@ -30,9 +29,12 @@
         </li>
       </ul>
     </nav>
-    Welcome to the Adventurer's Shop!
 
+    <h1>Welcome to the Adventurer's Shop!</h1>
+    
+<div class="pagebound">
     <%= yield %>
+</div>
 
   </body>
   <footer>
@@ -42,4 +44,5 @@
     This project uses images provided by "7soul1" / Henrique Lazarini, under the Creative Commons Attribution 3.0 License.
   <hr/>
 </footer>
+</div>
 </html>

@@ -1,23 +1,27 @@
-<p>This is all the Types</p>
-
-<ul>
-  <li>
-    <a href="/types/new">Add New Type</a>
-  </li>
-</ul>
+<h2>Type List</h2>
+<a href="/types/new">Add New Type</a>
 
 <hr/>
 
 <% @types.each do |type| %>
+<div class="indexitem">
 <p>Name: <%= type.name %></p>
 <p>Category: <%= type.category.name %></p>
-<p>Usable By: <br>
-<% type.usable_by.each do |cclass| %>
-<%=  cclass.name %> <br>
-<% end %>
-</p>
+<p>Usable By: </p><br>
 
+  <nav class="navbar">
+    <ul id="navlist">
+  <% type.usable_by.each do |cclass| %>
+  <li><%=cclass.name%></li>
+  <% end %>
+</ul>
+</nav>
+
+
+<br>
+<br>
 <a href="/types/<%=type.id %>">Details</a>
 
 <hr/>
+</div>
 <% end %>

@@ -6,8 +6,66 @@
 body{
   /* font-family: 'Press Start 2P'; */
     font-family: 'VT323';
+    font-size: 24px;
+    text-align: center;
+
 }
-/*
-.container {
-  display: flex
-} */
+
+/* Outer Container */
+.outerbound {
+  display: flex;
+  flex-direction: column;
+  background-color: grey;
+  padding: 5px;
+}
+
+/* Navbar start */
+.navbar {
+  display: table;
+border: 1px solid black;
+	margin: 0 auto;
+}
+
+ul#navlist {
+	list-style: none;
+	}
+
+ul#navlist li {
+	display: inline;
+  padding: 50px;
+}
+
+h1 {
+font-size: 50px;
+text-align: center;
+}
+/* Navbar end */
+
+/* page titles */
+h2 {
+  font-size: 30px;
+  text-align: center;
+
+}
+/* page Container */
+.pagebound {
+  background-color: lightgrey;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  align-items: center;
+  justify-content: center;
+}
+
+.indexitem {
+  background-color: #624a2e;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  margin: 5px;
+  align-items: center;
+  justify-content: center;
+  width: 800px;
+}
