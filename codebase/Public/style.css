@@ -1,5 +1,13 @@
 
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P');
+@import url('https://fonts.googleapis.com/css?family=VT323');
 
+
+body{
+  /* font-family: 'Press Start 2P'; */
+    font-family: 'VT323';
+}
+/*
 .container {
   display: flex
-}
+} */
