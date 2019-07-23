@@ -1,6 +1,6 @@
 DROP TABLE IF EXISTS items;
-DROP TABLE IF EXISTS types;
 DROP TABLE IF EXISTS cclass_type_rel;
+DROP TABLE IF EXISTS types;
 DROP TABLE IF EXISTS character_classes;
 DROP TABLE IF EXISTS categories;
 
@@ -18,8 +18,7 @@ name VARCHAR(255)
 CREATE TABLE types (
 id SERIAL4 PRIMARY KEY,
 name VARCHAR(255),
-category_id INT4 REFERENCES categories(id) ON DELETE CASCADE,
-usable_by VARCHAR(255)
+category_id INT4 REFERENCES categories(id) ON DELETE CASCADE
 );
 
 CREATE TABLE cclass_type_rel (

@@ -3,27 +3,26 @@ require_relative("../db/sql_runner.rb")
 class Type
 
   attr_reader :id
-  attr_accessor :name, :category_id, :usable_by
+  attr_accessor :name, :category_id
 
   def initialize(options)
     @id = options['id'].to_i if options['id']
     @name = options['name']
     @category_id = options['category_id'].to_i
-    @usable_by = options['usable_by']
   end
 
 
   def save()
-    sql="INSERT INTO types (name, category_id, usable_by) VALUES ($1, $2, $3) RETURNING id"
-    values=[@name, @category_id, @usable_by]
+    sql="INSERT INTO types (name, category_id) VALUES ($1, $2) RETURNING id"
+    values=[@name, @category_id]
     @id = SqlRunner.run(sql,values).first['id'].to_i
   end
 
 
 
   def update()
-    sql="UPDATE types SET (name, category_id, usable_by) = ($1, $2, $3) WHERE id=$4"
-    values=[@name, @category_id, @usable_by, @id]
+    sql="UPDATE types SET (name, category_id) = ($1, $2) WHERE id=$3"
+    values=[@name, @category_id, @id]
     SqlRunner.run(sql,values)
   end
 
@@ -46,6 +45,14 @@ class Type
         values=[category_id]
         found = SqlRunner.run(sql,values).first
         return Category.new(found)
+      end
+
+      def usable_by()
+        sql = "SELECT * FROM cclass_type_rel WHERE type_id = $1"
+        values=[id]
+        found = SqlRunner.run(sql,values)
+        result = found.map { |type| Type.new( type ) }
+        return result
       end
 
   #return an object given the name and category
