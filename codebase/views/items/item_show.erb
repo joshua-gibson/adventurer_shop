@@ -2,17 +2,23 @@
 
 <hr/>
 
+<div class="itemframe">
+  <span></span>
+  <div class="itemimg">
 <img src="../images/<%= @item.image_name %>" alt="Item Image" height="42" width="42">
+</div>
+</div>
 
-<p>Description: <%= @item.description %></p>
-<p>Type: <%= @item.type.name %></p>
-<p>Quantity: <%= @item.quantity %></p>
-<p>Level: <%= @item.level %></p>
-<p>Effects: <%= @item.effects %></p>
-<p>Buy Price: <%= @item.buy_price %></p>
-<p>Sell Price: <%= @item.sell_price %></p>
-<p>Margin: <%= @item.margin %></p>
-<br>
+<div class="attrlist">
+  <div class="attritem">Description: <%= @item.description %></div>
+  <div class="attritem">Type: <%= @item.type.name %></div>
+  <div class="attritem">Quantity: <%= @item.quantity %></div>
+  <div class="attritem">Level: <%= @item.level %></div>
+  <div class="attritem">Effects: <%= @item.effects %></div>
+  <div class="attritem">Buy Price: <%= @item.buy_price %></div>
+  <div class="attritem">Sell Price: <%= @item.sell_price %></div>
+  <div class="attritem">Margin: <%= @item.margin %></div>
+</div>
 
 <% if @item.stock_warn() == "low" %>
 <p>Low Stock!</p>

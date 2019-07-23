@@ -69,3 +69,30 @@ h2 {
   justify-content: center;
   width: 800px;
 }
+
+.itemframe {
+  background-color: gold;
+  border: 5px solid black;
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  margin: 5px;
+  align-items: center;
+  justify-content: center;
+
+}
+.itemimg {
+  background-color: white;
+  border: 2px solid black;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  margin: 5px;
+  align-items: center;
+  justify-content: center;
+}
+.attrlist{
+  display: flex;
+  flex-direction: column;
+  margin: 0 -5px;
+}
