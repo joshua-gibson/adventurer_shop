@@ -48,10 +48,14 @@ class Type
       end
 
       def usable_by()
-        sql = "SELECT * FROM cclass_type_rel WHERE type_id = $1"
+        sql = "SELECT cc.*
+               FROM cclass_type_rel cr
+               INNER JOIN character_classes cc
+               ON cr.cclass_id = cc.id
+               WHERE cr.type_id = $1"
         values=[id]
         found = SqlRunner.run(sql,values)
-        result = found.map { |type| Type.new( type ) }
+        result = found.map { |type| C_Class.new( type ) }
         return result
       end
 

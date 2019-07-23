@@ -11,6 +11,11 @@
 <% @types.each do |type| %>
 <p>Name: <%= type.name %></p>
 <p>Category: <%= type.category.name %></p>
+<p>Usable By: <br>
+<% type.usable_by.each do |cclass| %>
+<%=  cclass.name %> <br>
+<% end %>
+</p>
 
 <a href="/types/<%=type.id %>">Details</a>
 
