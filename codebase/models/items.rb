@@ -80,6 +80,19 @@ def self.all()
   return result
 end
 
+def self.all_cat(cat_id)
+  sql = "SELECT i.*
+         FROM items i
+         INNER JOIN types t
+         ON i.type_id = t.id
+         WHERE t.category_id = $1
+         ORDER BY type_id, level"
+  values=[cat_id]
+  items = SqlRunner.run( sql, values )
+  result = items.map { |item| Item.new( item ) }
+  return result
+end
+
 def self.find(id)
   sql = "SELECT * FROM items WHERE id = $1"
   values=[id]

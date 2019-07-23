@@ -1,9 +1,16 @@
 <p>This is all the Items</p>
 
 <hr/>
+<p>Filter By:</p>
 
+  <% @cats.each do |cat| %>
+        <a href="/shop/filter/<%=  cat.id %>"><%= cat.name %></a>
+  <% end %>
+
+
+<hr/>
 <% @items.each do |item| %>
-<img src="images/<%= item.image_name %>" alt="Item Image" height="42" width="42">
+<img src="../../images/<%= item.image_name %>" alt="Item Image" height="42" width="42">
 <p>Name: <%= item.name %></p>
 <p>Quantity: <%= item.quantity %></p>
 

@@ -3,6 +3,14 @@
 # index
 get '/shop' do
   @items = Item.all()
+  @cats = Category.all()
+  erb(:"items/item_index")
+end
+
+#filter
+get '/shop/filter/:cat_id' do
+  @cats = Category.all()
+  @items = Item.all_cat(params[:cat_id])
   erb(:"items/item_index")
 end
 
