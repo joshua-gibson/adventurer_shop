@@ -1,0 +1,18 @@
+<p>This is all the Class-Type Relationships</p>
+
+<ul>
+  <li>
+    <a href="/ctrel/new">Add New Character Class</a>
+  </li>
+</ul>
+
+<hr/>
+
+<% @ctrels.each do |ctrel| %>
+<p>Type: <%= ctrel.type_id %></p>
+<p>Class: <%= ctrel.cclass_id %></p>
+
+<a href="/ctrel/del/<%=ctrel.id %>">Delete</a>
+
+<hr/>
+<% end %>

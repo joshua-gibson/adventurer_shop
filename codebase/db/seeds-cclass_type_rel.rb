@@ -29,7 +29,7 @@ ctr_shoes_04.save
 
 # necklaces
 ctr_necklace_01 = CTrel.new({'cclass_id' => C_Class.find_by_name('Mage').id, 'type_id' => Type.find_by_nc('Necklace', 'Jewlery').id})
-ctr_necklace_01 = CTrel.new({'cclass_id' => C_Class.find_by_name('Cleric').id, 'type_id' => Type.find_by_nc('Necklace', 'Jewlery').id})
+ctr_necklace_02 = CTrel.new({'cclass_id' => C_Class.find_by_name('Cleric').id, 'type_id' => Type.find_by_nc('Necklace', 'Jewlery').id})
 
 ctr_necklace_01.save
 ctr_necklace_02.save
@@ -48,8 +48,8 @@ ctr_ring_04.save
 
 # helmets
 ctr_helmet_01 = CTrel.new({'cclass_id' => C_Class.find_by_name('Warrior').id, 'type_id' => Type.find_by_nc('Helmet', 'Clothing').id})
-ctr_helmet_01 = CTrel.new({'cclass_id' => C_Class.find_by_name('Ranger').id, 'type_id' => Type.find_by_nc('Helmet', 'Clothing').id})
-ctr_helmet_01 = CTrel.new({'cclass_id' => C_Class.find_by_name('Cleric').id, 'type_id' => Type.find_by_nc('Helmet', 'Clothing').id})
+ctr_helmet_02 = CTrel.new({'cclass_id' => C_Class.find_by_name('Ranger').id, 'type_id' => Type.find_by_nc('Helmet', 'Clothing').id})
+ctr_helmet_03 = CTrel.new({'cclass_id' => C_Class.find_by_name('Cleric').id, 'type_id' => Type.find_by_nc('Helmet', 'Clothing').id})
 
 ctr_helmet_01.save
 ctr_helmet_02.save
@@ -101,6 +101,6 @@ ctr_mace_01.save
 ctr_mace_02.save
 
 # spellbook
-ctr_spellbook_01 = CTrel.new({'cclass_id' => C_Class.find_by_name('Mage').id, 'type_id' => Type.find_by_nc('Bow', 'Spellbook').id})
+ctr_spellbook_01 = CTrel.new({'cclass_id' => C_Class.find_by_name('Mage').id, 'type_id' => Type.find_by_nc('Spellbook', 'Weapon').id})
 
 ctr_spellbook_01.save
