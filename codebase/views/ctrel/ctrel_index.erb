@@ -1,18 +1,15 @@
-<p>This is all the Class-Type Relationships</p>
+<h2>Class-Type Relationship List</h2>
 
-<ul>
-  <li>
+
     <a href="/ctrel/new">Add New Relationship</a>
-  </li>
-</ul>
-
 <hr/>
 
 <% @ctrels.each do |ctrel| %>
+<div class="indexitem">
 <p>Type: <%= ctrel.type.name %></p>
 <p>Class: <%= ctrel.c_class.name %></p>
 
 <a href="/ctrel/del/<%=ctrel.id %>">Delete</a>
 
-<hr/>
+</div>
 <% end %>

@@ -1,17 +1,14 @@
-<p>This is all the Character Classes</p>
+<h2>Character Class List</h2>
 
-<ul>
-  <li>
-    <a href="/cclass/new">Add New Character Class</a>
-  </li>
-</ul>
+<a href="/cclass/new">Add New Character Class</a>
 
 <hr/>
 
 <% @cclasses.each do |cclass| %>
+<div class="indexitem">
 <p>Name: <%= cclass.name %></p>
 
 <a href="/cclass/del/<%=cclass.id %>">Delete</a>
 
-<hr/>
+</div>
 <% end %>

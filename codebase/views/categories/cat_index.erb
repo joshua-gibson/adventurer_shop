@@ -1,17 +1,14 @@
-<p>This is all the Categories</p>
+<h2>Category List</h2>
 
-<ul>
-  <li>
-    <a href="/cats/new">Add New Category</a>
-  </li>
-</ul>
+<a href="/cats/new">Add New Category</a>
 
 <hr/>
+
 
 <% @cats.each do |cat| %>
+<div class="indexitem">
 <p>Name: <%= cat.name %></p>
 
-<a href="/cats/del/<%=cat.id %>">Delete</a> 
-
-<hr/>
+<a href="/cats/del/<%=cat.id %>">Delete</a>
+</div>
 <% end %>
