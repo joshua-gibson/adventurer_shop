@@ -32,11 +32,25 @@ class CTrel
     SqlRunner.run(sql,values)
   end
 
+  def type()
+    sql="SELECT * from types WHERE id = $1"
+    values=[@type_id]
+    found = SqlRunner.run(sql,values).first
+    return Type.new(found)
+  end
+
+  def c_class()
+    sql="SELECT * from character_classes WHERE id = $1"
+    values=[@cclass_id]
+    found = SqlRunner.run(sql,values).first
+    return C_Class.new(found)
+  end
+
     def self.find(id)
       sql = "SELECT * FROM cclass_type_rel WHERE id = $1"
       values=[id]
       found = SqlRunner.run(sql,values).first
-      return C_Class.new(found)
+      return CTrel.new(found)
     end
 
     def self.all()
