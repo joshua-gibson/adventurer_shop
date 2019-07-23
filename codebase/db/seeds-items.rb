@@ -362,3 +362,17 @@ i_mace_02.save
 i_mace_03.save
 i_mace_04.save
 i_mace_05.save
+
+# ring
+i_ring_01 = Item.new({
+  'name' => "Silver Ring",
+  'description' => 'A shiny silver ring',
+  'type_id' => Type.find_by_nc('Ring','Jewlery').id,
+  'image_name' => 'Ac_Ring04.png',
+  'quantity' => 4,
+  'level' => 1,
+  'effects' => 'none',
+  'buy_price' => 12,
+  'sell_price' => 21
+  })
+i_ring_01.save
