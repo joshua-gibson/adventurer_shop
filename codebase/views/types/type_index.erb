@@ -3,25 +3,21 @@
 
 <hr/>
 
-<% @types.each do |type| %>
-<div class="indexitem">
-<p>Name: <%= type.name %></p>
-<p>Category: <%= type.category.name %></p>
-<p>Usable By: </p><br>
+<div class="itembound">
+  <% @types.each do |type| %>
+  <div class="indexitem">
+    <div>Name: <%= type.name %></div>
+    <div>Category: <%= type.category.name %></div>
+    <div>Usable By: </div>
 
-  <nav class="navbar">
-    <ul id="navlist">
-  <% type.usable_by.each do |cclass| %>
-  <li><%=cclass.name%></li>
+    <div class="cclasslist">
+        <% type.usable_by.each do |cclass| %>
+          <div class="textitem"><%=cclass.name%></div>
+        <% end %>
+    </div>
+
+    <a href="/types/<%=type.id %>">Details</a>
+
+  </div>
   <% end %>
-</ul>
-</nav>
-
-
-<br>
-<br>
-<a href="/types/<%=type.id %>">Details</a>
-
-<hr/>
 </div>
-<% end %>

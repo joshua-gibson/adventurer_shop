@@ -77,12 +77,20 @@ h2 {
 }
 /* page Container */
 .pagebound {
-  background-color: #0100AB ;
+  background-color: #585550 ;
   border: 1px solid black;
   display: flex;
   flex-direction: column;
   padding: 5px;
   align-items: center;
+  justify-content: center;
+}
+
+/* item Container */
+.itembound {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center;
 }
 
@@ -96,7 +104,7 @@ h2 {
   margin: 5px;
   align-items: center;
   justify-content: center;
-  width: 800px;
+  width: 400px;
 }
 
 .itemframe {
@@ -124,4 +132,21 @@ h2 {
   display: flex;
   flex-direction: column;
   margin: 0 -5px;
+}
+
+.cclasslist{
+  display: flex;
+
+flex-direction: row;
+padding: 10px;
+margin: 5px;
+}
+
+.textitem {
+  background-color: #AB5500;
+  border: 1px solid black;
+  padding: 5px;
+  margin: 5px;
+  align-items: center;
+  justify-content: center;
 }

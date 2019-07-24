@@ -37,7 +37,6 @@ end
 #stock change
 post '/shop/stockch/:id' do
   @item = Item.find(params[:id])
-    # binding.pry
   @item.stock_ch(params[:chtype], params[:chamt].to_i)
   @item.update()
   redirect to "/shop/#{params['id']}"

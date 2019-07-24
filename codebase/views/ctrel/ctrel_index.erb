@@ -4,6 +4,7 @@
     <a href="/ctrel/new">Add New Relationship</a>
 <hr/>
 
+<div class="itembound">
 <% @ctrels.each do |ctrel| %>
 <div class="indexitem">
 <p>Type: <%= ctrel.type.name %></p>
@@ -13,3 +14,4 @@
 
 </div>
 <% end %>
+</div>
