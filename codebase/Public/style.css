@@ -157,3 +157,25 @@ margin: 5px;
   align-items: center;
   justify-content: center;
 }
+
+.stocktag {
+  background-color: #A90100;
+  position: relative;
+  z-index: 2;
+  left: 50px;
+  top: 25px;
+  border: 1px solid black;
+  font-size: 12px;
+  width: 30px;
+  height: 30px;
+  padding: 4px;
+
+}
+.nostock {
+  border: 3px solid black;
+  border-color: red;
+  padding: 2px;
+}
+.hide {
+  visibility: hidden;
+}

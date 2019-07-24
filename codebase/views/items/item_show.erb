@@ -1,20 +1,24 @@
 <h2><%= @item.name %></h2>
 
+<% if @item.stock_warn() == "low" %>
+  <div class="stocktag">Low Stock!</div>
+<% elsif @item.stock_warn() == "none" %>
+  <div class="stocktag nostock">No Stock!</div>
+<% else %>
+<div class="stocktag hide">for spacing</div>
+<% end %>
+
 <div class="imgframe">
-  <span></span>
   <div class="itemimg">
     <img src="../images/<%= @item.image_name %>" alt="Item Image" height="42" width="42">
   </div>
 </div>
 
+
+
   <div class="attritem">Description: <%= @item.description %></div>
-  <% if @item.stock_warn() == "low" %>
-  <p>Low Stock!</p>
-  <% elsif @item.stock_warn() == "none" %>
-  <p>No Stock!</p>
-  <% else %>
-  <br>
-  <% end %>
+
+
 <div class="itembound">
 
   <div class="attrlist">
