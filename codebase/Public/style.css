@@ -205,7 +205,14 @@ float: left;
   justify-content: center;
   align-items: center;
   width:400px;
+
 }
+
+.formfmt{
+  font-family: 'VT323';
+  font-size: 24px;
+}
+
 
 
 .hide {

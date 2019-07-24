@@ -1,23 +1,15 @@
-<p>This is the selected type</p>
+<h2><%= @type.name %></h2>
 
-<hr/>
-
-<p>Name: <%= @type.name %></p>
 <p>Category: <%= @type.category.name %></p>
-<hr/>
-<nav>
-  <ul>
-    <li>
-      <a href="/types/edit/<%=@type.id %>">Edit Type</a>
-    </li>
-    <li>
-      <% if @type.item_count >= 1 %>
-      <p>Delete Type</p>
-      <% else  %>
-      <a href="/types/del/<%=@type.id %>">Delete Type</a>
-      <% end  %>
-    </li>
-  </ul>
-</nav>
+
+<div class="bottomnav">
+  <a class="attrlist" href="/types/edit/<%=@type.id %>">Edit Type</a>
+
+  <% if @type.item_count >= 1 %>
+  <p>Delete Type</p>
+  <% else  %>
+  <a class="attrlist" href="/types/del/<%=@type.id %>">Delete Type</a>
+  <% end  %>
+</div>
 
 <hr/>

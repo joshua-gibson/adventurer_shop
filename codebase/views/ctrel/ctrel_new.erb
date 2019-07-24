@@ -3,7 +3,7 @@
 
 <br>
 <form action="/ctrel" method="post">
-  <select name="type_id" id="type-id">
+  <select class="formfmt" name="type_id" id="type-id">
   <% @types.each do |type| %>
       <option value=<%= type.id %>><%= type.name %></option>
   <% end %>
@@ -11,7 +11,7 @@
   <br>
   <br>
 
-  <select name="cclass_id" id="cclass-id">
+  <select class="formfmt" name="cclass_id" id="cclass-id">
   <% @cclasses.each do |cclass| %>
       <option value=<%= cclass.id %>><%= cclass.name %></option>
   <% end %>
@@ -19,5 +19,5 @@
 
   <br>
   <br>
-  <input type="submit" value="Create Relationship">
+  <input class="formfmt" type="submit" value="Create Relationship">
 </form>

@@ -7,7 +7,7 @@
 <div class="itembound">
 <% @cats.each do |cat| %>
 <div class="indexitem">
-<p>Name: <%= cat.name %></p>
+<p><%= cat.name %></p>
 
 <a href="/cats/del/<%=cat.id %>">Delete</a>
 </div>

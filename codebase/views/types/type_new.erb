@@ -1,21 +1,21 @@
 
-<p>Create a new Type!</p>
+<p>New Type</p>
 
 
 <br>
 <form action="/types" method="post">
   <label for="name">Name:</label>
-  <input type="text" name="name" id="name">
+  <input class="formfmt" type="text" name="name" id="name">
   <br>
   <br>
 
   <label for="category_id">Type:</label>
-  <select name="category_id" id="category-id">
+  <select class="formfmt" name="category_id" id="category-id">
   <% @categories.each do |cat| %>
       <option value=<%= cat.id %>><%= cat.name %> (<%= cat.name %>)</option>
   <% end %>
   </select>
   <br>
   <br>
-  <input type="submit" value="Create Type">
+  <input class="formfmt" type="submit" value="Create Type">
 </form>
