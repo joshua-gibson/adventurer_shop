@@ -38,35 +38,34 @@
 
 
 
+<div class="buyandsell">
+
 
 <form action="/shop/stockch/<%= @item.id %>" method="post">
-  <label for="chamt">Sell Item:</label>
+
+
+
+  <label class="bslabel" for="chamt">Sell Item:</label>
   <input type="hidden" name="chtype" id="chtype" value="sub">
-  <input type="number" name="chamt" id="chamt" value="1">
+  <input class="bsfield" type="number" name="chamt" id="chamt" value="1">
   <% if @item.quantity >= 1  %>
   <input type="submit" value="Sell">
   <% else %>
 <input class="hide" type="submit" value="Sell">
   <% end %>
+
+
 </form>
 
 <form action="/shop/stockch/<%= @item.id %>" method="post">
-  <label for="chamt">Buy Item:</label>
+  <label class="bslabel" for="chamt">Buy Item:</label>
   <input type="hidden" name="chtype" id="chtype" value="add">
-  <input type="number" name="chamt" id="chamt" value="1">
+  <input class="bsfield" type="number" name="chamt" id="chamt" value="1">
   <input type="submit" value="Buy">
 </form>
 
-<hr/>
-<nav>
-  <ul>
-    <li>
-      <a href="/shop/edit/<%=@item.id %>">Edit Item</a>
-    </li>
-    <li>
-      <a href="/shop/del/<%=@item.id %>">Delete Item</a>
-    </li>
-  </ul>
-</nav>
-
-<hr/>
+</div>
+<div class="bottomnav">
+  <a class="attrlist" href="/shop/edit/<%=@item.id %>">Edit Item</a>
+  <a class="attrlist" href="/shop/del/<%=@item.id %>">Delete Item</a>
+</div>

@@ -177,6 +177,37 @@ margin: 5px;
   border-color: red;
   padding: 2px;
 }
+
+
+.buyandsell {
+  background-color: #585550 ;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  justify-content: left;
+}
+
+.bslabel {
+width:150px;
+text-align: left;
+float: left;
+}
+
+.bsfield {
+  width: 50px;
+}
+
+.bottomnav {
+  display: flex;
+  flex-direction: row;
+  padding: 5px;
+  justify-content: center;
+  align-items: center;
+  width:400px;
+}
+
+
 .hide {
   visibility: hidden;
 }
