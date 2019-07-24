@@ -1,11 +1,11 @@
 <h2><%= @item.name %></h2>
 
 <% if @item.stock_warn() == "low" %>
-  <div class="stocktag">Low Stock!</div>
+  <div class="stocktag stocktagadj1">Low Stock!</div>
 <% elsif @item.stock_warn() == "none" %>
-  <div class="stocktag nostock">No Stock!</div>
+  <div class="stocktag stocktagadj1 nostock">No Stock!</div>
 <% else %>
-<div class="stocktag hide">for spacing</div>
+<div class="stocktag stocktagadj1 hide">for spacing</div>
 <% end %>
 
 <div class="imgframe">

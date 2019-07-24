@@ -20,7 +20,15 @@
   <% @items.each do |item| %>
   <div class="indexitem">
 
-    <div class="itemimg">
+    <% if item.stock_warn() == "low" %>
+      <div class=" stocktag stocktagadj2">Low Stock!</div>
+    <% elsif item.stock_warn() == "none" %>
+      <div class=" stocktag stocktagadj2 nostock">No Stock!</div>
+    <% else %>
+    <div class=" stocktag stocktagadj2 hide">for spacing</div>
+    <% end %>
+
+    <div class="itemimg itmimgbump">
   <img src="../../images/<%= item.image_name %>" alt="Item Image" height="42" width="42">
   </div>
   <div><%= item.name %></div>

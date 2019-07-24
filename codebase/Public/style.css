@@ -132,6 +132,9 @@ h2 {
   align-items: center;
   justify-content: center;
 }
+
+
+
 .attrlist{
   display: flex;
   flex-direction: column;
@@ -164,7 +167,6 @@ margin: 5px;
   position: relative;
   z-index: 2;
   left: 50px;
-  top: 35px;
   border: 1px solid black;
   font-size: 12px;
   width: 30px;
@@ -172,10 +174,24 @@ margin: 5px;
   padding: 4px;
 
 }
+
+.stocktagadj1 {
+  top: 35px;
+}
+
+.stocktagadj2 {
+  top: 5px;
+}
 .nostock {
   border: 3px solid black;
   border-color: red;
   padding: 2px;
+}
+
+.itmimgbump{
+
+  position: relative;
+  bottom: 20px;
 }
 
 
