@@ -43,7 +43,11 @@
   <label for="chamt">Sell Item:</label>
   <input type="hidden" name="chtype" id="chtype" value="sub">
   <input type="number" name="chamt" id="chamt" value="1">
+  <% if @item.quantity >= 1  %>
   <input type="submit" value="Sell">
+  <% else %>
+<input class="hide" type="submit" value="Sell">
+  <% end %>
 </form>
 
 <form action="/shop/stockch/<%= @item.id %>" method="post">
