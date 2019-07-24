@@ -196,11 +196,12 @@ margin: 5px;
 
 
 .buyandsell {
-  background-color: #585550 ;
-  border: 1px solid black;
+  background-color: #00AA01 ;
+  border: 3px double black;
   display: flex;
   flex-direction: column;
   padding: 5px;
+  margin: 5px;
   justify-content: left;
 }
 
@@ -256,6 +257,15 @@ float: left;
   padding: 5px;
   width: 350px;
 
+}
+
+.bsgroup {
+  display: flex;
+  flex-direction: row;
+}
+
+.bsbutton {
+  width: 70px;
 }
 
 .halfwidth {

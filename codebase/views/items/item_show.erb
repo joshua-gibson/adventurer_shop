@@ -41,27 +41,26 @@
 <div class="buyandsell">
 
 
-<form action="/shop/stockch/<%= @item.id %>" method="post">
+<form class="bsgroup" action="/shop/stockch/<%= @item.id %>" method="post">
 
-
-
-  <label class="bslabel" for="chamt">Sell Item:</label>
+  <label class="formfmt bslabel" for="chamt">Sell Item:</label>
   <input type="hidden" name="chtype" id="chtype" value="sub">
-  <input class="bsfield" type="number" name="chamt" id="chamt" value="1">
-  <% if @item.quantity >= 1  %>
-  <input type="submit" value="Sell">
-  <% else %>
-<input class="hide" type="submit" value="Sell">
-  <% end %>
+  <input class="formfmt bsfield" type="number" name="chamt" id="chamt" value="1">
 
+  <% if @item.quantity >= 1  %>
+  <input class="bsbutton formfmt" type="submit" value="Sell">
+  <% else %>
+<input class="formfmt hide" type="submit" value="Sell">
+  <% end %>
 
 </form>
 
-<form action="/shop/stockch/<%= @item.id %>" method="post">
-  <label class="bslabel" for="chamt">Buy Item:</label>
+<form class="bsgroup" action="/shop/stockch/<%= @item.id %>" method="post">
+
+  <label class="formfmt bslabel" for="chamt">Buy Item:</label>
   <input type="hidden" name="chtype" id="chtype" value="add">
-  <input class="bsfield" type="number" name="chamt" id="chamt" value="1">
-  <input type="submit" value="Buy">
+  <input class="formfmt bsfield" type="number" name="chamt" id="chamt" value="1">
+  <input class="bsbutton formfmt" type="submit" value="Buy">
 </form>
 
 </div>
