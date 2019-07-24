@@ -71,8 +71,10 @@ color: #FEFF54;
 
 /* page titles */
 h2 {
-  font-size: 30px;
+  font-size: 40px;
   text-align: center;
+  color: white;
+  margin: 0px;
 
 }
 /* page Container */
@@ -83,7 +85,7 @@ h2 {
   flex-direction: column;
   padding: 5px;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 /* item Container */
@@ -107,8 +109,8 @@ h2 {
   width: 400px;
 }
 
-.itemframe {
-  background-color: gold;
+.imgframe {
+  background-color: #FEFF54;
   border: 5px solid black;
   display: flex;
   flex-direction: column;
@@ -131,7 +133,12 @@ h2 {
 .attrlist{
   display: flex;
   flex-direction: column;
-  margin: 0 -5px;
+  padding-top: 5px;
+  padding-left: 40px;
+  padding-right: 40px;
+  margin: 5px;
+  align-items: left;
+  justify-content: left;
 }
 
 .cclasslist{

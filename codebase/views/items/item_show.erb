@@ -1,31 +1,39 @@
 <h2><%= @item.name %></h2>
 
-<hr/>
-
-<div class="itemframe">
+<div class="imgframe">
   <span></span>
   <div class="itemimg">
-<img src="../images/<%= @item.image_name %>" alt="Item Image" height="42" width="42">
-</div>
+    <img src="../images/<%= @item.image_name %>" alt="Item Image" height="42" width="42">
+  </div>
 </div>
 
-<div class="attrlist">
   <div class="attritem">Description: <%= @item.description %></div>
-  <div class="attritem">Type: <%= @item.type.name %></div>
-  <div class="attritem">Quantity: <%= @item.quantity %></div>
-  <div class="attritem">Level: <%= @item.level %></div>
-  <div class="attritem">Effects: <%= @item.effects %></div>
-  <div class="attritem">Buy Price: <%= @item.buy_price %></div>
-  <div class="attritem">Sell Price: <%= @item.sell_price %></div>
-  <div class="attritem">Margin: <%= @item.margin %></div>
+  <% if @item.stock_warn() == "low" %>
+  <p>Low Stock!</p>
+  <% elsif @item.stock_warn() == "none" %>
+  <p>No Stock!</p>
+  <% else %>
+  <br>
+  <% end %>
+<div class="itembound">
+
+  <div class="attrlist">
+    <div class="attritem">Type: <%= @item.type.name %></div>
+    <div class="attritem">Quantity: <%= @item.quantity %></div>
+    <div class="attritem">Level: <%= @item.level %></div>
+    <div class="attritem">Effects: <%= @item.effects %></div>
+  </div>
+
+  <div class="attrlist">
+
+    <div class="attritem">Buy Price: <%= @item.buy_price %></div>
+    <div class="attritem">Sell Price: <%= @item.sell_price %></div>
+    <div class="attritem">Margin: <%= @item.margin %></div>
+  </div>
 </div>
 
-<% if @item.stock_warn() == "low" %>
-<p>Low Stock!</p>
-<% elsif @item.stock_warn() == "none" %>
-<p>No Stock!</p>
-<% end %>
-<br>
+
+
 
 <form action="/shop/stockch/<%= @item.id %>" method="post">
   <label for="chamt">Sell Item:</label>
