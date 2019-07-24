@@ -1,53 +1,64 @@
 
 <h2>Edit Item</h2>
-<br>
 <form action="/shop/<%= @item.id %>" method="post">
-<label for="name">Name:</label>
-<input class="formfmt" type="text" name="name" id="name" value="<%= @item.name %>">
-<br>
-<br>
-<label for="description">Description:</label>
-<input class="formfmt" type="text" name="description" id="description" size="60" value="<%= @item.description %>">
-<br>
-<br>
+  <div class="formarea">
+    <div class="formgroup">
+      <div class="formarea">
+    <label for="name">Name:</label>
+    <input class="formfmt" type="text" name="name" id="name" value="<%= @item.name %>">
+    </div>
+    <div class="formarea">
+    <label for="description">Description:</label>
+    <input class="formfmt" type="text" name="description" id="description" value="<%= @item.description %>" >
+    </div>
+    <div class="formarea">
+    <label for="image_name">Image Name:</label>
+    <input class="formfmt" type="text" name="image_name" id="image-name" value="<%= @item.image_name %>">
+    </div>
 
+    <div class="formarea">
+      <label for="type_id">Type:</label>
+      <select class="formfmt" name="type_id" id="type-id">
+      <% @types.each do |type| %>
+          <% if type.id == @item.type_id  %>
+            <option value=<%= type.id %> selected><%= type.name %> (<%= type.category.name %>)</option>
+          <% else %>
+            <option value=<%= type.id %>><%= type.name %> (<%= type.category.name %>)</option>
+          <% end %>
+      <% end %>
+      </select>
+    </div>
 
-<label for="type_id">Type:</label>
-<select class="formfmt" name="type_id" id="type-id">
-<% @types.each do |type| %>
-    <% if type.id == @item.type_id  %>
-      <option value=<%= type.id %> selected><%= type.name %> (<%= type.category.name %>)</option>
-    <% else %>
-      <option value=<%= type.id %>><%= type.name %> (<%= type.category.name %>)</option>
-    <% end %>
-<% end %>
-</select>
+    <div class="formarea">
+    <label for="quantity">Quantity:</label>
+    <input class="formfmt" type="number" name="quantity" id="quantity" value="<%= @item.quantity %>">
+ </div>
+</div>
 
-<br>
-<br>
-<label for="image_name">Image Name:</label>
-<input class="formfmt" type="text" name="image_name" id="image-name" value="<%= @item.image_name %>">
-<br>
-<br>
-<label for="quantity">Quantity:</label>
-<input class="formfmt" type="number" name="quantity" id="quantity" value="<%= @item.quantity %>">
-<br>
-<br>
-<label for="level">Level:</label>
-<input class="formfmt" type="number" name="level" id="level" value="<%= @item.level %>">
-<br>
-<br>
-<label for="effects">Effects:</label>
-<input class="formfmt" type="text" name="effects" id="effects" value="<%= @item.effects %>">
-<br>
-<br>
-<label for="buy_price">Buy Price:</label>
-<input class="formfmt" type="number" name="buy_price" id="buy-price" value="<%= @item.buy_price %>">
-<br>
-<br>
-<label for="sell_price">Sell Price:</label>
-<input class="formfmt" type="number" name="sell_price" id="sell-price" value="<%= @item.sell_price %>">
-<br>
-<br>
-  <input class="formfmt" type="submit" value="Update Item">
+  <div class="formgroup">
+    <div class="formarea">
+    <label for="level">Level:</label>
+    <input class="formfmt" type="number" name="level" id="level" value="<%= @item.level %>">
+    </div>
+
+    <div class="formarea">
+    <label for="effects">Effects:</label>
+    <input class="formfmt" type="text" name="effects" id="effects" value="<%= @item.effects %>">
+    </div>
+
+    <div class="formarea">
+    <label for="buy_price">Buy Price:</label>
+    <input class="formfmt" type="number" name="buy_price" id="buy-price" value="<%= @item.buy_price %>"">
+    </div>
+
+    <div class="formarea">
+    <label for="sell_price">Sell Price:</label>
+    <input class="formfmt" type="number" name="sell_price" id="sell-price" value="<%= @item.sell_price %>">
+    </div>
+
+  </div>
+  </div>
+
+      <input class="formfmt" type="submit" value="Update Item">
 </form>
+</div>
