@@ -2,17 +2,18 @@
 
 <h2>Stock List</h2>
 
-  <a href="/shop/new">Add Item</a>
+  <a class="navinline" href="/shop/new">Add Item</a>
 
-<hr/>
-<p>Filter By:</p>
-    <nav class="navbar">
-      <ul id="navlist">
+<div class="navinline hilite">
+<div class="attrlist">Filter:</div>
+
+
   <% @cats.each do |cat| %>
-        <li><a href="/shop/filter/<%=  cat.id %>"><%= cat.name %></a></li>
+        <a class="attrlist" href="/shop/filter/<%=  cat.id %>"><%= cat.name %></a>
   <% end %>
-</ul>
-</nav>
+  <a class="attrlist" href="/shop">Remove Filter</a>
+
+</div>
 
 <div class="itembound">
 
