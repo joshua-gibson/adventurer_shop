@@ -15,16 +15,17 @@
 </nav>
 
 <div class="itembound">
-<% @items.each do |item| %>
-<div class="indexitem">
 
-  <div class="itemimg">
-<img src="../../images/<%= item.image_name %>" alt="Item Image" height="42" width="42">
-</div>
-<p>Name: <%= item.name %></p>
-<p>Quantity: <%= item.quantity %></p>
+  <% @items.each do |item| %>
+  <div class="indexitem">
 
-<a href="/shop/<%=item.id %>">Details</a>
-</div>
-<% end %>
+    <div class="itemimg">
+  <img src="../../images/<%= item.image_name %>" alt="Item Image" height="42" width="42">
+  </div>
+  <div><%= item.name %></div>
+  <div>Quantity: <%= item.quantity %></div>
+
+  <a href="/shop/<%=item.id %>">Details</a>
+  </div>
+  <% end %>
 </div>

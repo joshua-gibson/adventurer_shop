@@ -81,7 +81,7 @@ h2 {
 /* page Container */
 .pagebound {
   background-color: #585550 ;
-  border: 1px solid black;
+  border: 3px double black;
   display: flex;
   flex-direction: column;
   padding: 5px;
@@ -107,7 +107,8 @@ h2 {
   margin: 5px;
   align-items: center;
   justify-content: center;
-  width: 400px;
+  width: 300px;
+
 }
 
 .imgframe {
@@ -144,7 +145,6 @@ h2 {
 
 .cclasslist{
   display: flex;
-
 flex-direction: row;
 padding: 10px;
 margin: 5px;

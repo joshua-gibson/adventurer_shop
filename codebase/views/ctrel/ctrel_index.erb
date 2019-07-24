@@ -1,4 +1,4 @@
-<h2>Class-Type Relationship List</h2>
+<h2>Item Types Usable By Character Class</h2>
 
 
     <a href="/ctrel/new">Add New Relationship</a>
@@ -7,8 +7,8 @@
 <div class="itembound">
 <% @ctrels.each do |ctrel| %>
 <div class="indexitem">
-<p>Type: <%= ctrel.type.name %></p>
-<p>Class: <%= ctrel.c_class.name %></p>
+<div>Type: <%= ctrel.type.name %></div>
+<div>Class: <%= ctrel.c_class.name %></div>
 
 <a href="/ctrel/del/<%=ctrel.id %>">Delete</a>
 
