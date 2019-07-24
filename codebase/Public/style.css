@@ -237,3 +237,28 @@ float: left;
 .hide {
   visibility: hidden;
 }
+
+.formarea {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 5px;
+  padding: 5px;
+  justify-content: right;
+  align-items: right;
+}
+
+.formgroup {
+  display: flex;
+  flex-direction: column;
+  /* border: 1px solid black; */
+  margin: 5px;
+  padding: 5px;
+  width: 350px;
+
+}
+
+.halfwidth {
+
+  width: 50px;
+}
