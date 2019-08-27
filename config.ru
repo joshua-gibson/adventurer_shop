@@ -1,4 +1,2 @@
-#config.ru
-
-require "./app"
+require './app'
 run App
