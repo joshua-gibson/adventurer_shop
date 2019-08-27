@@ -2,7 +2,7 @@ require( 'sinatra' )
 require( 'sinatra/reloader' )
 require( 'pry-byebug' )
 
- set :port, 80
+ set :port, 4567
 
 require_relative('./models/items.rb')
 require_relative('./models/types.rb')
