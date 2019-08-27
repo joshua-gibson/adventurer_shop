@@ -1,4 +1,4 @@
 #config.ru
 
-require './codebase/app'
+require "./codebase/app.rb"
 run App
