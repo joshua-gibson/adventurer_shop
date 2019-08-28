@@ -17,7 +17,6 @@ PLATFORMS
   x86-mingw32
 
 DEPENDENCIES
-  rack
   sinatra
 
 BUNDLED WITH
